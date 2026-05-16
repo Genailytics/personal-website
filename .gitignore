@@ -3,3 +3,6 @@
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Superpowers planning artifacts (specs/plans) — kept locally, not tracked
+docs/superpowers/
