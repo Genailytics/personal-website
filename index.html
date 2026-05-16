@@ -1968,5 +1968,16 @@
   })();
 </script>
 
+<!-- Privacy-friendly analytics (GoatCounter) — counts production domain only -->
+<script>
+  window.goatcounter = {
+    path: function (p) {
+      return location.hostname === 'iamabhishek.cloud' ? p : null;
+    }
+  };
+</script>
+<script data-goatcounter="https://abhishek2602.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
