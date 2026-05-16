@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Option A: Coral rounded square with cream "a." in serif -->
+  <rect width="64" height="64" rx="14" fill="#CC785C"/>
+  <text x="32" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="500" fill="#F5F0E8" text-anchor="middle" font-style="italic">a.</text>
+</svg>

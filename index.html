@@ -6,6 +6,14 @@
 <title>Abhishek Kumar — LLM engineer, RAG whisperer, Bangalore.</title>
 <meta name="description" content="Senior ML/LLM engineer. Production RAG, LLM evaluation, AI agents. AWS Global GenAI Hackathon winner. Bangalore." />
 
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#CC785C">
+
 <!--
   ════════════════════════════════════════════════════════════════
    Hi there, source-reader.
@@ -266,14 +274,16 @@
     margin-bottom: 28px;
   }
   .pill .live {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: #6FA86F;
-    box-shadow: 0 0 0 3px rgba(111,168,111,0.22);
-    animation: pulse-green 1.8s ease-in-out infinite;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #5BA572;
+    animation: availability-pulse 2s ease-in-out infinite;
   }
-  @keyframes pulse-green {
-    0%,100% { box-shadow: 0 0 0 3px rgba(111,168,111,0.22); }
-    50%     { box-shadow: 0 0 0 6px rgba(111,168,111,0.08); }
+  @keyframes availability-pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(91,165,114,0.4); }
+    50%      { opacity: 0.7; box-shadow: 0 0 0 6px rgba(91,165,114,0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pill .live { animation: none; }
   }
 
   h1.name {
@@ -356,6 +366,34 @@
   }
   .btn .arrow { transition: transform .25s; }
   .btn:hover .arrow { transform: translate(3px, -3px); }
+
+  /* Resume download — credentials */
+  .resume-download-btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    margin: 20px 0 4px;
+    padding: 10px 18px;
+    font-family: var(--body);
+    font-size: 14px; font-weight: 500;
+    color: var(--ink-2);
+    background: transparent;
+    border: 1px solid rgba(204,120,92,0.30);
+    border-radius: 5px;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+    cursor: pointer;
+  }
+  .resume-download-btn svg { flex-shrink: 0; }
+  .resume-download-btn:hover {
+    background: var(--accent);
+    color: var(--paper-2);
+    border-color: var(--accent);
+  }
+  .resume-download-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  @media (max-width: 480px) {
+    .resume-download-btn { width: 100%; justify-content: center; }
+  }
 
   /* Hero terminal */
   .term {
@@ -1183,7 +1221,7 @@
       <div class="hero-text">
         <span class="pill reveal">
           <span class="live" aria-hidden="true"></span>
-          <span>Open to international remote &amp; DevRel at AI-native teams</span>
+          <span>Open to Senior LLM Engineer &amp; DevRel roles &middot; Remote-first &middot; International</span>
         </span>
 
         <h1 class="name reveal">
@@ -1623,6 +1661,18 @@
     <div class="section-label reveal">Credentials</div>
     <h2 class="reveal">The short version of the long PDF.</h2>
 
+    <a href="/abhishek-kumar-resume.pdf"
+       class="resume-download-btn reveal"
+       download="Abhishek-Kumar-Resume.pdf"
+       aria-label="Download resume as PDF">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>Download resume (PDF)</span>
+    </a>
+
     <div class="creds reveal" style="margin-top:24px;">
       <div class="cred">
         <div class="what">M.S. &mdash; Machine Learning &amp; AI <span class="sub">Liverpool John Moores University, UK</span></div>
@@ -1851,14 +1901,14 @@
   (function terminal() {
     const body = document.getElementById('term-body');
     const lines = [
-      { html: '<span class="term-prompt">abhishek@bangalore</span>:<span class="term-flag">~</span>$ ', type: 'abhishek --status', after: '<br>' },
+      { html: '<span class="term-prompt">abhishek@iamabhishek</span>:<span class="term-flag">~</span>$ ', type: 'abhishek --status', after: '<br>' },
       { html: '<span class="term-comment"># pulling current state...</span><br>', delay: 320 },
       { html: '<span class="term-key">role</span>      &rarr; Sr. ML/LLM Engineer &middot; Staff, AI &amp; GenAI<br>', delay: 80 },
       { html: '<span class="term-key">building</span>  &rarr; production RAG, eval harnesses, agent skills<br>', delay: 80 },
       { html: '<span class="term-key">community</span> &rarr; AI Collective Bangalore (7,000+)<br>', delay: 80 },
       { html: '<span class="term-key">open-to</span>   &rarr; <span style="color:#E8C547">international remote</span> + DevRel<br>', delay: 80 },
       { html: '<span class="term-key">timezone</span>  &rarr; IST (UTC+5:30) &middot; flexible<br>', delay: 80 },
-      { html: '<span class="term-prompt">abhishek@bangalore</span>:<span class="term-flag">~</span>$ <span class="term-cursor"></span>', delay: 240 }
+      { html: '<span class="term-prompt">abhishek@iamabhishek</span>:<span class="term-flag">~</span>$ <span class="term-cursor"></span>', delay: 240 }
     ];
 
     let idx = 0;
