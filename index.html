@@ -612,6 +612,149 @@
     .proj h3 { font-size: 22px; }
   }
 
+  /* ───── Side quests ───── */
+  .sq-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .sq-chip {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+    background: var(--paper-2);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease,
+                border-color .2s ease, transform .2s ease;
+  }
+  .sq-chip:hover { border-color: var(--accent); }
+  .sq-chip.active {
+    background: var(--accent);
+    color: var(--paper);
+    border-color: var(--accent);
+  }
+  .sq-chip:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .sq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 24px;
+  }
+  @media (max-width: 767px) { .sq-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 479px) { .sq-grid { grid-template-columns: 1fr; } }
+
+  .sq-card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 22px 22px 20px;
+    box-shadow: 0 1px 2px rgba(60,40,30,0.04), 0 8px 18px -16px rgba(60,40,30,0.20);
+    transition: transform .15s ease, box-shadow .25s ease,
+                border-color .2s ease, opacity .25s ease;
+    will-change: transform;
+  }
+  .sq-card:hover {
+    transform: translateY(-2px) rotate(-0.5deg);
+    box-shadow: var(--shadow-card);
+    border-color: var(--rule-strong);
+  }
+  .sq-card.is-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+  }
+
+  .sq-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .sq-index {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+  }
+  .sq-card .sq-title {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink-2);
+    margin: 0 0 6px;
+  }
+  .sq-tagline {
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin: 0 0 12px;
+  }
+  .sq-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, opacity .3s ease, margin .3s ease;
+  }
+  .sq-card:hover .sq-desc,
+  .sq-card:focus-within .sq-desc {
+    max-height: 240px;
+    opacity: 1;
+    margin: 0 0 14px;
+  }
+  .sq-card .tags { margin-top: 4px; }
+  .sq-card:hover .tag-chip { border-color: var(--rule-strong); }
+
+  /* Status badges — mirror the Selected-work status palette */
+  .sq-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .sq-badge.prod     { background: color-mix(in srgb, var(--sage) 32%, transparent);     color: #3F6133; }
+  .sq-badge.rnd      { background: color-mix(in srgb, var(--lavender) 45%, transparent); color: #54407A; }
+  .sq-badge.built    { background: color-mix(in srgb, var(--sun) 42%, transparent);      color: #6F5808; }
+  .sq-badge.personal { background: color-mix(in srgb, var(--accent) 20%, transparent);   color: #934A35; }
+
+  @media (max-width: 479px) {
+    .sq-filters { gap: 8px; }
+    .sq-chip { font-size: 11px; padding: 7px 13px; }
+  }
+
+  /* Touch / no-hover: always show descriptions, no card tilt */
+  @media (hover: none) {
+    .sq-card .sq-desc {
+      max-height: 360px;
+      opacity: 1;
+      margin: 0 0 14px;
+    }
+    .sq-card:hover { transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sq-card, .sq-chip, .sq-desc { transition: none; }
+    .sq-card:hover { transform: none; }
+  }
+
   /* ───── Journey / timeline ───── */
   .journey {
     position: relative;
@@ -1463,6 +1606,119 @@
 
 <div class="divider" aria-hidden="true">*&nbsp;&nbsp;*&nbsp;&nbsp;*</div>
 
+<!-- ─────────────── SIDE QUESTS ─────────────── -->
+<section id="side-quests">
+  <div class="wrap">
+    <div class="section-label reveal">Side quests</div>
+    <h2 class="reveal">Six was an arbitrary number &mdash; <em style="font-style:italic;color:var(--accent)">here&rsquo;s the rest of the rotation</em>.</h2>
+    <p class="reveal" style="color:var(--ink-soft);max-width:62ch;margin:0 0 28px;">
+      More builds, less depth. Same person.
+    </p>
+
+    <div class="sq-filters reveal" role="group" aria-label="Filter side quests by category">
+      <button type="button" class="sq-chip active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="sq-chip" data-filter="production" aria-pressed="false">Production</button>
+      <button type="button" class="sq-chip" data-filter="agents" aria-pressed="false">Agents</button>
+      <button type="button" class="sq-chip" data-filter="experiments" aria-pressed="false">Experiments</button>
+    </div>
+
+    <div class="sq-grid reveal">
+      <article class="sq-card" data-category="production">
+        <div class="sq-card-head">
+          <span class="sq-index">#07</span>
+          <span class="sq-badge prod">Production</span>
+        </div>
+        <h3 class="sq-title">Document Intelligence Service</h3>
+        <p class="sq-tagline">Foundation layer of an enterprise GenAI platform.</p>
+        <p class="sq-desc">LLM-light document-to-structured-content service. Powers downstream compliance, classification, and retrieval workflows for a Tier-1 enterprise. The unglamorous infrastructure that everything else stands on.</p>
+        <div class="tags">
+          <span class="tag-chip">FastAPI</span><span class="tag-chip">Python</span><span class="tag-chip">OCR</span><span class="tag-chip">Structured extraction</span><span class="tag-chip">Vector store</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="production">
+        <div class="sq-card-head">
+          <span class="sq-index">#08</span>
+          <span class="sq-badge prod">Production</span>
+        </div>
+        <h3 class="sq-title">Multimodal Assurance Pipeline</h3>
+        <p class="sq-tagline">Compliance review across docs, slides, spreadsheets, and images.</p>
+        <p class="sq-desc">Extended a text-only compliance pipeline to handle PPTX, XLSX, embedded images, and OLE objects using Claude Vision. The pipeline now reads anything an auditor would actually open.</p>
+        <div class="tags">
+          <span class="tag-chip">Claude Vision</span><span class="tag-chip">FastAPI</span><span class="tag-chip">APIGEE</span><span class="tag-chip">Python</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="agents">
+        <div class="sq-card-head">
+          <span class="sq-index">#09</span>
+          <span class="sq-badge rnd">R&amp;D</span>
+        </div>
+        <h3 class="sq-title">LinkedIn Connection Intelligence</h3>
+        <p class="sq-tagline">Multi-agent RAG over personal LinkedIn graph data.</p>
+        <p class="sq-desc">Ingests a LinkedIn connection graph, enriches it, and surfaces second-order paths and warm introductions. Pitched to the Vercel AI Accelerator. The &ldquo;LinkedIn GPT for individuals&rdquo; idea.</p>
+        <div class="tags">
+          <span class="tag-chip">LangGraph</span><span class="tag-chip">Qdrant</span><span class="tag-chip">Neo4j</span><span class="tag-chip">Postgres</span><span class="tag-chip">Next.js</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="agents">
+        <div class="sq-card-head">
+          <span class="sq-index">#10</span>
+          <span class="sq-badge built">Built</span>
+        </div>
+        <h3 class="sq-title">Voice Reservation Agent</h3>
+        <p class="sq-tagline">Conversational restaurant booking over the phone.</p>
+        <p class="sq-desc">Takes restaurant reservation calls end-to-end &mdash; handles availability, party size, dietary notes, and confirmation, then writes to the booking system. The first time hearing it pick up was uncanny.</p>
+        <div class="tags">
+          <span class="tag-chip">n8n</span><span class="tag-chip">ElevenLabs</span><span class="tag-chip">Twilio</span><span class="tag-chip">OpenAI</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="agents">
+        <div class="sq-card-head">
+          <span class="sq-index">#11</span>
+          <span class="sq-badge built">Built</span>
+        </div>
+        <h3 class="sq-title">ICP Qualifier Agent</h3>
+        <p class="sq-tagline">Lead qualification agent on a partner agent platform.</p>
+        <p class="sq-desc">Qualifies inbound leads against an ideal customer profile &mdash; pulls firmographic and intent signals, scores, routes. Built on the Nasiko A2A platform as part of their agent ecosystem.</p>
+        <div class="tags">
+          <span class="tag-chip">Nasiko</span><span class="tag-chip">Python</span><span class="tag-chip">Anthropic SDK</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="experiments">
+        <div class="sq-card-head">
+          <span class="sq-index">#12</span>
+          <span class="sq-badge personal">Personal</span>
+        </div>
+        <h3 class="sq-title">OpenTravel</h3>
+        <p class="sq-tagline">Travel chatbot grounded in YouTube creator transcripts.</p>
+        <p class="sq-desc">Niche RAG that treats travel YouTube creators as the knowledge base. Extracts transcripts, builds a hybrid retriever, answers travel questions with cited timestamps. The internet&rsquo;s actual travel guide, finally queryable.</p>
+        <div class="tags">
+          <span class="tag-chip">YouTube API</span><span class="tag-chip">OpenAI</span><span class="tag-chip">Reranking</span><span class="tag-chip">Embeddings</span>
+        </div>
+      </article>
+
+      <article class="sq-card" data-category="experiments">
+        <div class="sq-card-head">
+          <span class="sq-index">#13</span>
+          <span class="sq-badge personal">Personal</span>
+        </div>
+        <h3 class="sq-title">HydroLedger</h3>
+        <p class="sq-tagline">Car wash management system, no-code first.</p>
+        <p class="sq-desc">End-to-end ops for a small car wash &mdash; bookings, customer ledger, daily reports. Built to test how far Lovable + Supabase can take you before you reach for code. Further than expected.</p>
+        <div class="tags">
+          <span class="tag-chip">Lovable</span><span class="tag-chip">Supabase</span><span class="tag-chip">React</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">*&nbsp;&nbsp;*&nbsp;&nbsp;*</div>
+
 <!-- ─────────────── JOURNEY ─────────────── -->
 <section id="journey">
   <div class="wrap">
@@ -1964,6 +2220,45 @@
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => io.observe(el));
+  })();
+
+  /* ───────────────── Side quests filter ───────────────── */
+  (function sideQuests() {
+    const root = document.getElementById('side-quests');
+    if (!root) return;
+    const chips = root.querySelectorAll('.sq-chip');
+    const cards = root.querySelectorAll('.sq-card');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(card) {
+      card.style.display = '';
+      if (!reduce) void card.offsetWidth;   // reflow so the fade-back animates
+      card.classList.remove('is-hidden');
+    }
+    function hide(card) {
+      card.classList.add('is-hidden');
+      if (reduce) { card.style.display = 'none'; return; }
+      card.addEventListener('transitionend', function te(e) {
+        if (e.propertyName !== 'opacity') return;
+        if (card.classList.contains('is-hidden')) card.style.display = 'none';
+        card.removeEventListener('transitionend', te);
+      });
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          const on = c === chip;
+          c.classList.toggle('active', on);
+          c.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        const filter = chip.dataset.filter;
+        cards.forEach(card => {
+          const matches = filter === 'all' || card.dataset.category === filter;
+          matches ? show(card) : hide(card);
+        });
+      });
+    });
   })();
 
   /* ───────────────── Chat bubble dismiss ───────────────── */
