@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" width="860" height="360" font-family="'Inter', system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#3D3929"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="360" rx="14" fill="#F5F0E8"/>
+  <text x="32" y="40" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#CC785C" letter-spacing="0.08em">RETRIEVAL ORDER · THE DIRECTIONAL INVERSION</text>
+  <text x="32" y="68" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="22" font-weight="500" fill="#2C2522">Where the permission check happens</text>
+<text x="40" y="90" text-anchor="start" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10.5" fill="#6B5F58">RETRIEVE, THEN FILTER</text>
+<rect x="40" y="104" width="148" height="56" rx="8" fill="#FAF9F5" stroke="#A8B5A0" stroke-width="1.5"/>
+<rect x="40" y="104" width="4" height="56" rx="2" fill="#A8B5A0"/>
+<text x="114.0" y="136.66666666666666" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Query</text>
+<line x1="188" y1="132.0" x2="254" y2="132.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="254" y="104" width="148" height="56" rx="8" fill="#FAF9F5" stroke="#3D3929" stroke-width="1.5"/>
+<text x="328.0" y="126.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Retrieve top-k</text>
+<text x="328.0" y="145.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">all chunks</text>
+<line x1="402" y1="132.0" x2="468" y2="132.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="468" y="104" width="148" height="56" rx="8" fill="#F0D9CF" stroke="#CC785C" stroke-width="1.5"/>
+<rect x="468" y="104" width="4" height="56" rx="2" fill="#CC785C"/>
+<text x="542.0" y="126.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">LLM</text>
+<text x="542.0" y="145.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">sees everything</text>
+<line x1="616" y1="132.0" x2="682" y2="132.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="682" y="104" width="148" height="56" rx="8" fill="#FAF9F5" stroke="#6B5F58" stroke-width="1.5"/>
+<text x="756.0" y="126.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Redact after</text>
+<text x="756.0" y="145.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">too late</text>
+<text x="542.0" y="182" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10.5" fill="#CC785C" font-style="italic">the restricted passage already entered the prompt</text>
+<text x="40" y="216" text-anchor="start" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10.5" fill="#6B5F58">SCOPE FIRST, THEN RETRIEVE</text>
+<rect x="40" y="230" width="148" height="56" rx="8" fill="#FAF9F5" stroke="#A8B5A0" stroke-width="1.5"/>
+<rect x="40" y="230" width="4" height="56" rx="2" fill="#A8B5A0"/>
+<text x="114.0" y="262.6666666666667" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Query</text>
+<line x1="188" y1="258.0" x2="254" y2="258.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="254" y="230" width="148" height="56" rx="8" fill="#EDE5F0" stroke="#C9B8D9" stroke-width="1.5"/>
+<rect x="254" y="230" width="4" height="56" rx="2" fill="#C9B8D9"/>
+<text x="328.0" y="252.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Permission filter</text>
+<text x="328.0" y="271.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">row-level scope</text>
+<line x1="402" y1="258.0" x2="468" y2="258.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="468" y="230" width="148" height="56" rx="8" fill="#FAF9F5" stroke="#3D3929" stroke-width="1.5"/>
+<text x="542.0" y="252.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">Retrieve in scope</text>
+<text x="542.0" y="271.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">eligible docs only</text>
+<line x1="616" y1="258.0" x2="682" y2="258.0" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="682" y="230" width="148" height="56" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="682" y="230" width="4" height="56" rx="2" fill="#E8C547"/>
+<text x="756.0" y="252.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="14" font-weight="500" fill="#2C2522">LLM + logged</text>
+<text x="756.0" y="271.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">reproducible</text>
+<text x="542.0" y="308" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10.5" fill="#6B5F58" font-style="italic">the model only ever sees what this user is allowed to see</text>
+</svg>
