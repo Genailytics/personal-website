@@ -3,8 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Abhishek Kumar — LLM engineer, RAG whisperer, Bangalore.</title>
-<meta name="description" content="Senior ML/LLM engineer. Production RAG, LLM evaluation, AI agents. AWS Global GenAI Hackathon winner. Bangalore." />
+<title>Abhishek Kumar — AI / GenAI Solution Architect</title>
+<meta name="description" content="GenAI Solution Architect with 10+ years designing governed, production-ready enterprise AI — retrieval architecture, compliance automation, and multi-cloud LLM systems across telecom, healthcare, and pharma." />
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="Abhishek Kumar — AI / GenAI Solution Architect" />
+<meta property="og:description" content="GenAI Solution Architect with 10+ years designing governed, production-ready enterprise AI — retrieval architecture, compliance automation, and multi-cloud LLM systems across telecom, healthcare, and pharma." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://iamabhishek.cloud/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@__iamabhishek" />
+<meta name="twitter:title" content="Abhishek Kumar — AI / GenAI Solution Architect" />
+<meta name="twitter:description" content="GenAI Solution Architect with 10+ years designing governed, production-ready enterprise AI." />
 
 <!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -1325,6 +1335,95 @@
     will-change: transform;
   }
 
+  /* ───── Principles (how I think) ───── */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+  }
+  @media (max-width: 640px) { .principles-grid { grid-template-columns: 1fr; } }
+  .principle {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 28px 28px 24px;
+    position: relative;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1),
+                box-shadow .35s ease,
+                border-color .2s ease;
+  }
+  .principle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--rule-strong);
+  }
+  .principle .p-num {
+    font-family: var(--display);
+    font-size: 38px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .principle h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink-2);
+  }
+  .principle p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .domain-line {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--rule);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .principle, .principle:hover { transition: none; transform: none; }
+  }
+
+  /* ───── Architecture-call callout (project trade-off) ───── */
+  .arch-call {
+    display: block;
+    margin: 14px 0 14px;
+    padding: 12px 14px 12px 16px;
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    max-width: 64ch;
+  }
+  .arch-call .label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+
   /* ───── Print ───── */
   @media print {
     body::before, body::after { display: none; }
@@ -1366,7 +1465,7 @@
       <div class="hero-text">
         <span class="pill reveal">
           <span class="live" aria-hidden="true"></span>
-          <span>Open to Senior LLM Engineer &amp; DevRel roles &middot; Remote-first &middot; International</span>
+          <span>Open to Senior AI Architect &amp; GenAI Solution Architecture roles &middot; Remote-first &middot; International</span>
         </span>
 
         <h1 class="name reveal">
@@ -1375,14 +1474,14 @@
         </h1>
 
         <div class="rotator-wrap reveal" aria-live="polite">
-          <span class="rotator-prefix">I&rsquo;m a </span><span id="rotator" class="rotator">LLM engineer</span>
+          <span id="rotator" class="rotator">Solution Architect</span>
         </div>
 
         <p class="lede reveal">
-          Ten years of building production AI, mostly in the parts you don&rsquo;t see &mdash; <em>retrieval that
-          doesn&rsquo;t lie, evals that don&rsquo;t lie either, and agents that politely admit when they&rsquo;re wrong</em>.
-          Currently leading enterprise RAG delivery for a Tier-1 engagement; on weekends I run a 7,000-person
-          practitioner community in Bangalore.
+          Ten years turning ambiguous business and regulatory requirements into <em>governed, production-ready AI</em>.
+          I own solution architecture for enterprise compliance and document-intelligence systems &mdash; defining
+          classification taxonomies, retrieval architectures, and LLM integration patterns, and naming the trade-offs
+          that make them scale, survive an audit, and ship.
         </p>
 
         <div class="ctas reveal">
@@ -1429,7 +1528,7 @@
         <li><b>JobPilot</b> &mdash; a personal job-hunt copilot for the v0 global hackathon. Next.js + Neon Postgres + Apify on Vercel. Shipping the v0 submission this week.<span class="tag build">building</span></li>
         <li>Porting the <b>Superpowers</b> plugin to <b>Kiro IDE on Windows</b> &mdash; pairing on Windows is a love story I&rsquo;m still negotiating.<span class="tag ship lav">porting</span></li>
         <li>Publishing <b>Claude Agent Skills</b>: <em>v0-prompting</em>, <em>humanizer</em>, <em>AI Ark</em>, <em>360Brew profile optimizer</em>, and a LinkedIn content one I keep tweaking at 2am.<span class="tag ship">shipping</span></li>
-        <li>Quietly exploring <b>international remote roles</b> and <b>DevRel positions</b> at AI-native companies. (Yes, this is a hint.)<span class="tag ship coral">listening</span></li>
+        <li>Quietly exploring <b>international remote roles</b> and <b>Senior AI Architect positions</b> at AI-native companies. (Yes, this is a hint.)<span class="tag ship coral">listening</span></li>
         <li>Reading: PageIndex paper, agentic eval harnesses, anything Anthropic&rsquo;s research org puts on arxiv at 11pm IST.<span class="tag ship lav">reading</span></li>
       </ul>
     </div>
@@ -1444,59 +1543,103 @@
     <div class="section-label reveal">What I do</div>
     <h2 class="reveal">Four outcomes, not a wall of skills.</h2>
     <p class="reveal" style="color:var(--ink-soft);max-width:60ch;margin:0 0 36px;">
-      I think people hire engineers for results, not for buzzword bingo. So here&rsquo;s the work, grouped
-      by what it actually <em style="font-style:italic">produces</em>.
+      I think people hire architects for outcomes, not for buzzword bingo. So here&rsquo;s the work, grouped
+      by what it actually <em style="font-style:italic">decides</em>.
     </p>
 
     <div class="svc-grid">
       <div class="svc reveal">
-        <div class="svc-num">01 / production</div>
-        <h3>Production RAG systems</h3>
-        <p>Compliance-grade retrieval pipelines that cite their sources and don&rsquo;t make things up. Hybrid retrieval, reranking, chunking strategy that survives a 300-page PDF.</p>
+        <div class="svc-num">01 / architecture</div>
+        <h3>GenAI Solution Architecture</h3>
+        <p>Translating ambiguous business and regulatory requirements into reference architectures. Technology selection, integration patterns, schema and API design, scalability, and production-readiness.</p>
         <div class="tags">
-          <span class="tag-chip">RAG <span class="ann">(retrieval kind)</span></span>
-          <span class="tag-chip">Bedrock</span>
-          <span class="tag-chip">Qdrant</span>
-          <span class="tag-chip">FastAPI</span>
+          <span class="tag-chip">Reference architecture</span>
+          <span class="tag-chip">Tech selection</span>
+          <span class="tag-chip">Integration design</span>
+          <span class="tag-chip">Production-readiness</span>
         </div>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-num">02 / quality gates</div>
-        <h3>LLM evaluation &amp; quality gates</h3>
-        <p>Eval harnesses that turn &ldquo;vibes&rdquo; into a number. RAGAS, TruLens, LLM-as-judge, regression suites that ship with every prompt change.</p>
+        <div class="svc-num">02 / retrieval</div>
+        <h3>Retrieval Architecture &amp; Trade-offs</h3>
+        <p>Designing and formally evaluating retrieval strategies &mdash; RAG, PageIndex, hybrid, reranking &mdash; with evaluation harnesses that make the approach-selection call defensible, not vibes-based.</p>
         <div class="tags">
+          <span class="tag-chip">RAG</span>
+          <span class="tag-chip">PageIndex</span>
+          <span class="tag-chip">Hybrid retrieval</span>
+          <span class="tag-chip">Eval harnesses</span>
           <span class="tag-chip">RAGAS</span>
-          <span class="tag-chip">TruLens</span>
-          <span class="tag-chip">DeepEval</span>
-          <span class="tag-chip">judge-LLMs</span>
         </div>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-num">03 / agents</div>
-        <h3>AI agent architectures</h3>
-        <p>Multi-agent orchestration, tool calling, and MCP integrations &mdash; built so you can read the trace and understand exactly why it did what it did.</p>
+        <div class="svc-num">03 / governance</div>
+        <h3>Governance &amp; Compliance by Design</h3>
+        <p>Audit-ready systems with classification taxonomies, PII redaction, model risk assessment, and explainability &mdash; aligned to GDPR, EU AI Act, and enterprise security KPIs.</p>
         <div class="tags">
-          <span class="tag-chip">LangGraph</span>
-          <span class="tag-chip">MCP</span>
-          <span class="tag-chip">Anthropic SDK</span>
-          <span class="tag-chip">DSPy</span>
-        </div>
-      </div>
-
-      <div class="svc reveal">
-        <div class="svc-num">04 / leadership</div>
-        <h3>GenAI engineering leadership</h3>
-        <p>Taking AI pilots from prototype to production with governance, cost controls, and quality gates. The unglamorous middle of the lifecycle, owned end-to-end.</p>
-        <div class="tags">
-          <span class="tag-chip">pilot → prod</span>
-          <span class="tag-chip">governance</span>
-          <span class="tag-chip">cost controls</span>
+          <span class="tag-chip">GDPR</span>
           <span class="tag-chip">EU AI Act</span>
+          <span class="tag-chip">PII redaction</span>
+          <span class="tag-chip">Audit-readiness</span>
+          <span class="tag-chip">Explainability</span>
+        </div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-num">04 / multi-cloud</div>
+        <h3>Multi-cloud &amp; MLOps Architecture</h3>
+        <p>Reference implementations that transfer cleanly across AWS Bedrock, Azure AI, and GCP. Model lifecycle, drift detection, CI/CD, capacity planning, monitoring.</p>
+        <div class="tags">
+          <span class="tag-chip">AWS Bedrock</span>
+          <span class="tag-chip">Azure AI</span>
+          <span class="tag-chip">GCP</span>
+          <span class="tag-chip">MLOps</span>
+          <span class="tag-chip">Drift detection</span>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">*&nbsp;&nbsp;*&nbsp;&nbsp;*</div>
+
+<!-- ─────────────── PRINCIPLES (how I think) ─────────────── -->
+<section id="principles">
+  <div class="wrap">
+    <div class="section-label reveal">&mdash; how I think</div>
+    <h2 class="reveal">Architecture is the art of <em style="font-style:italic;color:var(--accent)">naming what you gave up</em>.</h2>
+    <p class="reveal" style="color:var(--ink-soft);max-width:60ch;margin:0 0 8px;">
+      Four principles I bring to every system.
+    </p>
+
+    <div class="principles-grid">
+      <div class="principle reveal">
+        <div class="p-num">01</div>
+        <h3>Trade-offs over trends.</h3>
+        <p>Every choice sacrifices something. I name what I gave up and why &mdash; that&rsquo;s the line between picking a tool and architecting a system.</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="p-num">02</div>
+        <h3>Governed by default.</h3>
+        <p>Compliance, auditability, and explainability are designed in from day one &mdash; not bolted on the week before the audit.</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="p-num">03</div>
+        <h3>Evaluation before production.</h3>
+        <p>Formal quality gates and evaluation harnesses gate every prompt and retrieval change. Nothing ships on &ldquo;looks good.&rdquo;</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="p-num">04</div>
+        <h3>Portable by design.</h3>
+        <p>Patterns that transfer cleanly across Bedrock, Azure, and GCP &mdash; so a cloud choice is never a one-way door.</p>
+      </div>
+    </div>
+
+    <p class="domain-line reveal">Patterns proven across telecom, healthcare, pharmaceuticals, and retail.</p>
   </div>
 </section>
 
@@ -1521,7 +1664,10 @@
             <span class="status prod">Production</span>
           </div>
           <p class="pitch">&ldquo;Claude reads 300 pages of privacy law and cites its sources.&rdquo;</p>
-          <p class="desc">End-to-end production RAG for a <b>Tier-1 enterprise engagement</b>: Claude Sonnet on Bedrock, Qdrant for hybrid retrieval, FastAPI orchestration, RAGAS gates. Running a formal head-to-head of PageIndex vs chunked-RAG with reranking, measuring faithfulness, context precision, latency, and per-query cost &mdash; the decision framework other compliance workflows now follow.</p>
+          <p class="desc">End-to-end production RAG for a <b>Tier-1 enterprise engagement</b>: Claude Sonnet on Bedrock, Qdrant for hybrid retrieval, FastAPI orchestration, RAGAS gates &mdash; the decision framework other compliance workflows now follow.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>Ran a formal RAG-vs-PageIndex evaluation instead of defaulting to chunked RAG &mdash; measured precision@k, faithfulness, latency, and per-query cost to produce a defensible technology-selection recommendation for production.
+          </aside>
           <div class="tags">
             <span class="tag-chip">Claude Sonnet</span><span class="tag-chip">Bedrock</span><span class="tag-chip">Qdrant</span><span class="tag-chip">RAGAS</span><span class="tag-chip">PageIndex</span><span class="tag-chip">FastAPI</span>
           </div>
@@ -1537,6 +1683,9 @@
           </div>
           <p class="pitch">&ldquo;222 asset classes, structured outputs, a multi-week process killed.&rdquo;</p>
           <p class="desc">LLM classifier on Claude/Bedrock for <b>a regulated enterprise client</b>: structured output validation, confidence scoring, rationale generation, and a human-in-the-loop review queue for audit defensibility. Replaced a multi-week manual categorization with near-real-time.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>Chose structured-output validation plus human-in-the-loop review over fully-automated classification &mdash; trading some throughput for the audit defensibility that 222 regulated asset classes demand.
+          </aside>
           <div class="tags">
             <span class="tag-chip">Claude</span><span class="tag-chip">Bedrock</span><span class="tag-chip">structured outputs</span><span class="tag-chip">HITL</span><span class="tag-chip">governance</span>
           </div>
@@ -1552,6 +1701,9 @@
           </div>
           <p class="pitch">&ldquo;A job-hunt copilot that actually reads the listings.&rdquo;</p>
           <p class="desc">Personal project, v0 global hackathon submission. Next.js + Neon Postgres + Apify scrapers on Vercel, with retrieval over my own work history and a small evaluator for fit. Currently being dogfooded on my own search.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>Managed services (Neon, Apify, Vercel AI Gateway) over self-hosted infrastructure &mdash; trading per-call cost for shipping a working copilot in a weekend.
+          </aside>
           <div class="tags">
             <span class="tag-chip">Next.js</span><span class="tag-chip">Neon</span><span class="tag-chip">Apify</span><span class="tag-chip">v0</span><span class="tag-chip">personal</span>
           </div>
@@ -1567,6 +1719,9 @@
           </div>
           <p class="pitch">&ldquo;$10K and a year of validation.&rdquo;</p>
           <p class="desc">Winner of the AWS Global GenAI Hackathon. Claude on Bedrock with dynamic, context-aware question generation and RAG-grounded transcript evaluation against role competencies. Prompt orchestration, structured-output scoring, quality validation across both generated and evaluated content.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>Dynamic, profile-conditioned question generation over a static question bank &mdash; trading determinism for relevance, with RAG-grounded evaluation to keep scoring defensible.
+          </aside>
           <div class="tags">
             <span class="tag-chip">Claude</span><span class="tag-chip">Bedrock</span><span class="tag-chip">RAG</span><span class="tag-chip">eval-LLM</span><span class="tag-chip">$10K prize</span>
           </div>
@@ -1582,6 +1737,9 @@
           </div>
           <p class="pitch">&ldquo;A knowledge graph that explains itself to a pharmacist.&rdquo;</p>
           <p class="desc">Neo4j knowledge graph with LLM-based entity linking and a RAG retrieval interface for complex pharmacological queries, built for <b>a large US healthcare deployment</b>. Every response grounded to a source document with inline citation and auditor-visible provenance. Azure OpenAI + Azure AI Search.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>A knowledge-graph + RAG hybrid over pure vector retrieval &mdash; trading ingestion complexity for the provenance and relationship traceability that pharmacovigilance requires.
+          </aside>
           <div class="tags">
             <span class="tag-chip">Neo4j</span><span class="tag-chip">Azure OpenAI</span><span class="tag-chip">AI Search</span><span class="tag-chip">grounded RAG</span><span class="tag-chip">provenance</span>
           </div>
@@ -1597,6 +1755,9 @@
           </div>
           <p class="pitch">&ldquo;Multi-tenant B2B prospecting, wrapped in MCP.&rdquo;</p>
           <p class="desc">Multi-tenant B2B prospecting SaaS exposed as an MCP server. FastAPI + Anthropic MCP SDK. The clients pull leads through Claude &mdash; the agent does the boring part, the human does the call.</p>
+          <aside class="arch-call">
+            <span class="label">The architecture call</span>A multi-tenant MCP server with credit metering over a single-tenant tool &mdash; trading build complexity for a model that scales to multiple clients without code forks.
+          </aside>
           <div class="tags">
             <span class="tag-chip">FastAPI</span><span class="tag-chip">MCP</span><span class="tag-chip">Anthropic SDK</span><span class="tag-chip">multi-tenant</span>
           </div>
@@ -1966,8 +2127,9 @@
     <div class="contact-card reveal">
       <h2>Working on something <em>interesting?</em> Send a note.</h2>
       <p>
-        I read everything. Best for: production RAG / eval consulting, DevRel conversations at AI-native
-        companies, community collabs, or just a good thread about retrieval. Slow for: cold sales pitches.
+        I read everything. Best for: AI / GenAI Solution Architect conversations at AI-native companies,
+        production-RAG and governance consulting, community collabs, or just a good thread about retrieval
+        trade-offs. Slow for: cold sales pitches.
       </p>
 
       <div class="contact-grid">
@@ -2113,9 +2275,9 @@
   (function rotator() {
     const el = document.getElementById('rotator');
     const items = [
-      'LLM engineer',
-      'RAG whisperer',
-      'community builder',
+      'Solution Architect',
+      'Retrieval & RAG design',
+      'Governance-first',
       'Bangalore-based',
       'occasional skeptic of my own demos'
     ];
@@ -2161,10 +2323,10 @@
     const lines = [
       { html: '<span class="term-prompt">abhishek@iamabhishek</span>:<span class="term-flag">~</span>$ ', type: 'abhishek --status', after: '<br>' },
       { html: '<span class="term-comment"># pulling current state...</span><br>', delay: 320 },
-      { html: '<span class="term-key">role</span>      &rarr; Sr. ML/LLM Engineer &middot; Staff, AI &amp; GenAI<br>', delay: 80 },
-      { html: '<span class="term-key">building</span>  &rarr; production RAG, eval harnesses, agent skills<br>', delay: 80 },
+      { html: '<span class="term-key">role</span>      &rarr; AI / GenAI Solution Architect &middot; Staff, AI &amp; GenAI<br>', delay: 80 },
+      { html: '<span class="term-key">designing</span> &rarr; retrieval architectures, governance, eval harnesses<br>', delay: 80 },
       { html: '<span class="term-key">community</span> &rarr; AI Collective Bangalore (7,000+)<br>', delay: 80 },
-      { html: '<span class="term-key">open-to</span>   &rarr; <span style="color:#E8C547">international remote</span> + DevRel<br>', delay: 80 },
+      { html: '<span class="term-key">open-to</span>   &rarr; <span style="color:#E8C547">international remote</span> + architect roles<br>', delay: 80 },
       { html: '<span class="term-key">timezone</span>  &rarr; IST (UTC+5:30) &middot; flexible<br>', delay: 80 },
       { html: '<span class="term-prompt">abhishek@iamabhishek</span>:<span class="term-flag">~</span>$ <span class="term-cursor"></span>', delay: 240 }
     ];
