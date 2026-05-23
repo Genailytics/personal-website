@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 720" width="820" height="720" font-family="'Inter', system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#3D3929"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="720" rx="14" fill="#F5F0E8"/>
+  <text x="32" y="40" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#CC785C" letter-spacing="0.08em">ARCHITECTURE · GOVERNANCE BY DESIGN</text>
+  <text x="32" y="68" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="22" font-weight="500" fill="#2C2522">Compliance classification at scale</text>
+<rect x="110.0" y="100" width="280" height="50" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="110.0" y="100" width="4" height="50" rx="2" fill="#A8B5A0"/>
+<text x="250.0" y="119.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Security controls</text>
+<text x="250.0" y="138.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">control library</text>
+<rect x="430.0" y="100" width="280" height="50" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="430.0" y="100" width="4" height="50" rx="2" fill="#A8B5A0"/>
+<text x="570.0" y="119.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Enterprise asset classes</text>
+<text x="570.0" y="138.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">asset taxonomy (hundreds of classes)</text>
+<line x1="250.0" y1="150" x2="250.0" y2="170" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="570.0" y1="150" x2="570.0" y2="170" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="250.0" y1="170" x2="570.0" y2="170" stroke="#3D3929" stroke-width="1.5"/>
+<line x1="410.0" y1="170" x2="410.0" y2="192" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="270.0" y="194" width="280" height="50" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="270.0" y="194" width="4" height="50" rx="2" fill="#CC785C"/>
+<text x="410.0" y="213.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Classification taxonomy</text>
+<text x="410.0" y="232.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">control → asset mapping logic</text>
+<line x1="410.0" y1="244" x2="410.0" y2="270" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="270.0" y="272" width="280" height="64" rx="8" fill="#F0D9CF" stroke="#CC785C" stroke-width="1.5"/>
+<rect x="270.0" y="272" width="4" height="64" rx="2" fill="#CC785C"/>
+<text x="410.0" y="298.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">LLM classifier · Claude on Bedrock</text>
+<text x="410.0" y="317.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">structured output + confidence scoring</text>
+<line x1="410.0" y1="336" x2="410.0" y2="362" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<text x="418.0" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" fill="#6B5F58">high confidence</text>
+<line x1="410.0" y1="346" x2="590.0" y2="346" stroke="#3D3929" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="590.0" y1="346" x2="590.0" y2="362" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)" stroke-dasharray="4 4"/>
+<rect x="500.0" y="364" width="180" height="56" rx="8" fill="#EDE5F0" stroke="#C9B8D9" stroke-width="1.5"/>
+<rect x="500.0" y="364" width="4" height="56" rx="2" fill="#C9B8D9"/>
+<text x="590.0" y="386.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">Human-in-the-loop review</text>
+<text x="590.0" y="405.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">low-confidence routing</text>
+<line x1="590.0" y1="420" x2="590.0" y2="440" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="590.0" y1="440" x2="410.0" y2="440" stroke="#3D3929" stroke-width="1.5"/>
+<rect x="270.0" y="442" width="280" height="56" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="270.0" y="442" width="4" height="56" rx="2" fill="#E8C547"/>
+<text x="410.0" y="464.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Control → asset traceability</text>
+<text x="410.0" y="483.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">audit-ready · continuous compliance</text>
+<line x1="410.0" y1="362" x2="410.0" y2="442" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+</svg>
