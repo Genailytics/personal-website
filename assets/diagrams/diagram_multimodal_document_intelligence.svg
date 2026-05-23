@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 700" width="820" height="700" font-family="'Inter', system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#3D3929"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="700" rx="14" fill="#F5F0E8"/>
+  <text x="32" y="40" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#CC785C" letter-spacing="0.08em">ARCHITECTURE · MULTIMODAL INGESTION</text>
+  <text x="32" y="68" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="22" font-weight="500" fill="#2C2522">Multimodal document intelligence</text>
+<rect x="61.0" y="100" width="130" height="46" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="61.0" y="100" width="4" height="46" rx="2" fill="#A8B5A0"/>
+<text x="126.0" y="127.33333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">PPTX</text>
+<line x1="126.0" y1="146" x2="126.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<rect x="203.0" y="100" width="130" height="46" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="203.0" y="100" width="4" height="46" rx="2" fill="#A8B5A0"/>
+<text x="268.0" y="127.33333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">XLSX</text>
+<line x1="268.0" y1="146" x2="268.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<rect x="345.0" y="100" width="130" height="46" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="345.0" y="100" width="4" height="46" rx="2" fill="#A8B5A0"/>
+<text x="410.0" y="127.33333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">DOCX</text>
+<line x1="410.0" y1="146" x2="410.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<rect x="487.0" y="100" width="130" height="46" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="487.0" y="100" width="4" height="46" rx="2" fill="#A8B5A0"/>
+<text x="552.0" y="127.33333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">PNG / JPEG</text>
+<line x1="552.0" y1="146" x2="552.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<rect x="629.0" y="100" width="130" height="46" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="629.0" y="100" width="4" height="46" rx="2" fill="#A8B5A0"/>
+<text x="694.0" y="127.33333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">OLE objects</text>
+<line x1="694.0" y1="146" x2="694.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<line x1="126.0" y1="162" x2="694.0" y2="162" stroke="#3D3929" stroke-width="1.5"/>
+<line x1="410.0" y1="162" x2="410.0" y2="178" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="230.0" y="180" width="360" height="50" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="230.0" y="180" width="4" height="50" rx="2" fill="#CC785C"/>
+<text x="410.0" y="199.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Format router &amp; classifier</text>
+<text x="410.0" y="218.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">dispatches each type to the right extractor</text>
+<line x1="410.0" y1="230" x2="410.0" y2="256" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="230.0" y="258" width="360" height="60" rx="8" fill="#F0D9CF" stroke="#CC785C" stroke-width="1.5"/>
+<rect x="230.0" y="258" width="4" height="60" rx="2" fill="#CC785C"/>
+<text x="410.0" y="282.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Vision-based extraction</text>
+<text x="410.0" y="301.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">vision LLM via enterprise API gateway</text>
+<line x1="410.0" y1="318" x2="410.0" y2="344" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="230.0" y="346" width="360" height="58" rx="8" fill="#EDE5F0" stroke="#C9B8D9" stroke-width="1.5"/>
+<rect x="230.0" y="346" width="4" height="58" rx="2" fill="#C9B8D9"/>
+<text x="410.0" y="369.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Structured content layer</text>
+<text x="410.0" y="388.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">normalized schema · provenance · confidence</text>
+<line x1="410.0" y1="404" x2="410.0" y2="412" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="194.0" y1="412" x2="626.0" y2="412" stroke="#3D3929" stroke-width="1.5"/>
+<line x1="194.0" y1="412" x2="194.0" y2="430" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="94.0" y="430" width="200" height="48" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="94.0" y="430" width="4" height="48" rx="2" fill="#E8C547"/>
+<text x="194.0" y="458.3333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">Compliance review</text>
+<line x1="410.0" y1="412" x2="410.0" y2="430" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="310.0" y="430" width="200" height="48" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="310.0" y="430" width="4" height="48" rx="2" fill="#E8C547"/>
+<text x="410.0" y="458.3333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">Classification</text>
+<line x1="626.0" y1="412" x2="626.0" y2="430" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="526.0" y="430" width="200" height="48" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="526.0" y="430" width="4" height="48" rx="2" fill="#E8C547"/>
+<text x="626.0" y="458.3333333333333" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="13" font-weight="500" fill="#2C2522">Retrieval / RAG</text>
+</svg>

@@ -1424,6 +1424,61 @@
     vertical-align: 1px;
   }
 
+  /* ───── Architecture diagram toggle ───── */
+  .arch-diagram-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 10px;
+    padding: 6px 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    transition: opacity .2s ease;
+  }
+  .arch-diagram-toggle:hover { opacity: 0.72; }
+  .arch-diagram-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .arch-diagram-toggle .caret {
+    display: inline-block;
+    transition: transform .25s cubic-bezier(.2,.7,.2,1);
+    transform-origin: center;
+  }
+  .arch-diagram-toggle[aria-expanded="true"] .caret {
+    transform: rotate(90deg);
+  }
+  .arch-diagram-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s cubic-bezier(.2,.7,.2,1);
+  }
+  .arch-diagram-panel.open { max-height: 1100px; }
+  .arch-diagram-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 6px 0 8px;
+    padding: 2px 2px 8px;
+  }
+  .arch-diagram-scroll img {
+    display: block;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px -16px rgba(60,40,30,0.30);
+    max-width: 100%;
+    min-width: 560px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .arch-diagram-toggle .caret,
+    .arch-diagram-panel { transition: none; }
+  }
+
   /* ───── Print ───── */
   @media print {
     body::before, body::after { display: none; }
@@ -1660,14 +1715,23 @@
         <div class="year">2026<br>now</div>
         <div class="body">
           <div class="proj-head">
-            <h3>PIA Compliance RAG Pipeline</h3>
+            <h3>Compliance RAG Pipeline</h3>
             <span class="status prod">Production</span>
           </div>
-          <p class="pitch">&ldquo;Claude reads 300 pages of privacy law and cites its sources.&rdquo;</p>
+          <p class="pitch">&ldquo;Claude reads 300+ pages of regulatory text and cites its sources.&rdquo;</p>
           <p class="desc">End-to-end production RAG for a <b>Tier-1 enterprise engagement</b>: Claude Sonnet on Bedrock, Qdrant for hybrid retrieval, FastAPI orchestration, RAGAS gates &mdash; the decision framework other compliance workflows now follow.</p>
           <aside class="arch-call">
             <span class="label">The architecture call</span>Ran a formal RAG-vs-PageIndex evaluation instead of defaulting to chunked RAG &mdash; measured precision@k, faithfulness, latency, and per-query cost to produce a defensible technology-selection recommendation for production.
           </aside>
+          <button class="arch-diagram-toggle" type="button" aria-expanded="false" aria-controls="diagram-rag-retrieval-eval">
+            <span class="caret" aria-hidden="true">&#9656;</span>
+            <span>View architecture</span>
+          </button>
+          <div class="arch-diagram-panel" id="diagram-rag-retrieval-eval">
+            <div class="arch-diagram-scroll">
+              <img src="assets/diagrams/diagram_rag_retrieval_evaluation.svg" alt="Retrieval evaluation architecture pattern — RAG vs PageIndex comparison flow with evaluation gates" loading="lazy" width="820" height="760">
+            </div>
+          </div>
           <div class="tags">
             <span class="tag-chip">Claude Sonnet</span><span class="tag-chip">Bedrock</span><span class="tag-chip">Qdrant</span><span class="tag-chip">RAGAS</span><span class="tag-chip">PageIndex</span><span class="tag-chip">FastAPI</span>
           </div>
@@ -1681,11 +1745,20 @@
             <h3>Enterprise Asset Classification at Scale</h3>
             <span class="status prod">Production</span>
           </div>
-          <p class="pitch">&ldquo;222 asset classes, structured outputs, a multi-week process killed.&rdquo;</p>
+          <p class="pitch">&ldquo;Hundreds of asset classes, structured outputs, a multi-week process killed.&rdquo;</p>
           <p class="desc">LLM classifier on Claude/Bedrock for <b>a regulated enterprise client</b>: structured output validation, confidence scoring, rationale generation, and a human-in-the-loop review queue for audit defensibility. Replaced a multi-week manual categorization with near-real-time.</p>
           <aside class="arch-call">
-            <span class="label">The architecture call</span>Chose structured-output validation plus human-in-the-loop review over fully-automated classification &mdash; trading some throughput for the audit defensibility that 222 regulated asset classes demand.
+            <span class="label">The architecture call</span>Chose structured-output validation plus human-in-the-loop review over fully-automated classification &mdash; trading some throughput for the audit defensibility that hundreds of regulated asset classes demand.
           </aside>
+          <button class="arch-diagram-toggle" type="button" aria-expanded="false" aria-controls="diagram-compliance-classification">
+            <span class="caret" aria-hidden="true">&#9656;</span>
+            <span>View architecture</span>
+          </button>
+          <div class="arch-diagram-panel" id="diagram-compliance-classification">
+            <div class="arch-diagram-scroll">
+              <img src="assets/diagrams/diagram_compliance_classification.svg" alt="Compliance classification architecture pattern — structured-output validation with human-in-the-loop review queue" loading="lazy" width="820" height="720">
+            </div>
+          </div>
           <div class="tags">
             <span class="tag-chip">Claude</span><span class="tag-chip">Bedrock</span><span class="tag-chip">structured outputs</span><span class="tag-chip">HITL</span><span class="tag-chip">governance</span>
           </div>
@@ -1791,8 +1864,8 @@
           <span class="sq-index">#07</span>
           <span class="sq-badge prod">Production</span>
         </div>
-        <h3 class="sq-title">Document Intelligence Service</h3>
-        <p class="sq-tagline">Foundation layer of an enterprise GenAI platform.</p>
+        <h3 class="sq-title">Document intelligence layer</h3>
+        <p class="sq-tagline">The ingestion layer downstream compliance and retrieval workflows stand on.</p>
         <p class="sq-desc">LLM-light document-to-structured-content service. Powers downstream compliance, classification, and retrieval workflows for a Tier-1 enterprise. The unglamorous infrastructure that everything else stands on.</p>
         <div class="tags">
           <span class="tag-chip">FastAPI</span><span class="tag-chip">Python</span><span class="tag-chip">OCR</span><span class="tag-chip">Structured extraction</span><span class="tag-chip">Vector store</span>
@@ -1804,11 +1877,20 @@
           <span class="sq-index">#08</span>
           <span class="sq-badge prod">Production</span>
         </div>
-        <h3 class="sq-title">Multimodal Assurance Pipeline</h3>
+        <h3 class="sq-title">Multimodal document processing pipeline</h3>
         <p class="sq-tagline">Compliance review across docs, slides, spreadsheets, and images.</p>
         <p class="sq-desc">Extended a text-only compliance pipeline to handle PPTX, XLSX, embedded images, and OLE objects using Claude Vision. The pipeline now reads anything an auditor would actually open.</p>
+        <button class="arch-diagram-toggle" type="button" aria-expanded="false" aria-controls="diagram-multimodal-doc-intelligence">
+          <span class="caret" aria-hidden="true">&#9656;</span>
+          <span>View architecture</span>
+        </button>
+        <div class="arch-diagram-panel" id="diagram-multimodal-doc-intelligence">
+          <div class="arch-diagram-scroll">
+            <img src="assets/diagrams/diagram_multimodal_document_intelligence.svg" alt="Multimodal document intelligence architecture pattern — multi-format ingestion via vision-capable LLM" loading="lazy" width="820" height="700">
+          </div>
+        </div>
         <div class="tags">
-          <span class="tag-chip">Claude Vision</span><span class="tag-chip">FastAPI</span><span class="tag-chip">APIGEE</span><span class="tag-chip">Python</span>
+          <span class="tag-chip">Claude Vision</span><span class="tag-chip">FastAPI</span><span class="tag-chip">API gateway</span><span class="tag-chip">Python</span>
         </div>
       </article>
 
@@ -2421,6 +2503,21 @@
           const matches = filter === 'all' || card.dataset.category === filter;
           matches ? show(card) : hide(card);
         });
+      });
+    });
+  })();
+
+  /* ───────────────── Architecture diagram toggle ───────────────── */
+  (function archDiagrams() {
+    const toggles = document.querySelectorAll('.arch-diagram-toggle');
+    toggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = document.getElementById(panelId);
+        if (!panel) return;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        panel.classList.toggle('open', !open);
       });
     });
   })();
