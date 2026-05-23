@@ -1,0 +1,27 @@
+title: "Abhishek Kumar"
+description: "Senior ML/LLM Engineer · Notes on RAG, agents, and what broke this week"
+url: "https://iamabhishek.cloud"
+author: "Abhishek Kumar"
+
+# Permalink structure for posts: /blog/post-slug/
+permalink: /blog/:slug/
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+# Plugins (whitelisted by GitHub Pages — no Actions needed)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build output
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .github/
+  - node_modules/
+  - "*.skill"
+  - "vendor/"
