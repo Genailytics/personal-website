@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="'Inter', system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#3D3929"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="500" rx="14" fill="#F5F0E8"/>
+  <text x="32" y="40" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#CC785C" letter-spacing="0.08em">ARCHITECTURE · CONTEXT DEBT</text>
+  <text x="32" y="68" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="22" font-weight="500" fill="#2C2522">The confidence inversion</text>
+<rect x="260.0" y="100" width="300" height="60" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<rect x="260.0" y="100" width="4" height="60" rx="2" fill="#A8B5A0"/>
+<text x="410.0" y="124.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Incomplete or stale context</text>
+<text x="410.0" y="143.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">wrong docs · missing tool output · drifted memory</text>
+<rect x="90.0" y="220" width="250" height="60" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<text x="215.0" y="244.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Weaker model</text>
+<text x="215.0" y="263.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">limited reasoning</text>
+<rect x="480.0" y="220" width="250" height="60" rx="8" fill="#F0D9CF" stroke="#CC785C" stroke-width="1.5"/>
+<rect x="480.0" y="220" width="4" height="60" rx="2" fill="#CC785C"/>
+<text x="605.0" y="244.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Frontier model</text>
+<text x="605.0" y="263.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">the upgrade you reached for</text>
+<line x1="410" y1="160" x2="215" y2="220" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="410" y1="160" x2="605" y2="220" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="90.0" y="340" width="250" height="64" rx="8" fill="#FAF9F5" stroke="#2C2522" stroke-width="1.5"/>
+<text x="215.0" y="366.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Obvious error</text>
+<text x="215.0" y="385.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">incoherent, easy to spot</text>
+<rect x="480.0" y="340" width="250" height="64" rx="8" fill="#F5EBC9" stroke="#E8C547" stroke-width="1.5"/>
+<rect x="480.0" y="340" width="4" height="64" rx="2" fill="#E8C547"/>
+<text x="605.0" y="366.0" text-anchor="middle" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="15" font-weight="500" fill="#2C2522">Coherent, confident, wrong</text>
+<text x="605.0" y="385.0" text-anchor="middle" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#6B5F58">reads like a careful senior wrote it</text>
+<line x1="215" y1="280" x2="215" y2="340" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="605" y1="280" x2="605" y2="340" stroke="#3D3929" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<text x="215" y="432" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12.5" fill="#5E7050">caught in review</text>
+<text x="605" y="432" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12.5" fill="#CC785C">ships to production</text>
+<text x="410.0" y="474" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" fill="#6B5F58" font-style="italic">same bad context — the smarter the model, the later you find out</text>
+</svg>
